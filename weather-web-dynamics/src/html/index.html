@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>weather</title>
+        <link rel="stylesheet" href="./../styles/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        >
+    </head>
+
+    <body>
+        <div class="top-container">
+            <div class="top-section">
+                <div class="curr-city-pic-date-and-time">
+                    <div class="curr-city-pic">
+                        <img
+                            class="city-pic"
+                            src="./../../assets/cities/anadyr.svg"
+                            alt="city-pic"
+                        >
+                    </div>
+                    <div class="curr-city-select">
+                        <input
+                            type="text"
+                            class="select-city"
+                            list="city-data-lists"
+                            name="place-holder"
+                            placeholder=""
+                        >
+                        <datalist id="city-data-lists"> </datalist>
+                        <div>
+                            <p class="hour-and-min">
+                                <span class="hr-min"></span>
+                                <span class="second"></span>
+                            </p>
+                            <img class="curr-city-clock" alt="">
+                        </div>
+                        <p class="date"></p>
+                    </div>
+                </div>
+                <div class="curr-city-temp-status-info">
+                    <div class="temp-status-info-top">
+                        <div class="curr-city-temp">
+                            <div class="temp-status-head">
+                                <p>Temp &deg;C</p>
+                            </div>
+                            <div class="temp-status-value">
+                                <p class="temp-celsius"></p>
+                            </div>
+                        </div>
+                        <div class="curr-city-status">
+                            <div class="temp-status-head">
+                                <p>Humidity</p>
+                            </div>
+                            <div class="temp-status-value">
+                                <p class="humidity"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="temp-status-info-bottom">
+                        <div class="curr-city-temp">
+                            <div class="temp-status-head">
+                                <p>Temp F</p>
+                            </div>
+                            <div class="temp-status-value">
+                                <p class="temp-fah"></p>
+                            </div>
+                        </div>
+                        <div class="curr-city-status">
+                            <div class="temp-status-head">
+                                <p>Precipitation</p>
+                            </div>
+                            <div class="temp-status-value">
+                                <p class="precipitation"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="curr-day-updates">
+                    <div class="weather-scale">
+                        <p class="curr-city-time">Now</p>
+                        <div class="divider"></div>
+                        <img
+                            class="weather-image"
+                            src="./../../assets/weather/cloudyIcon.svg"
+                            alt="weather image"
+                        >
+                        <p class="weather-temp"></p>
+                    </div>
+                    <div class="center-divider"></div>
+                    <div class="weather-scale">
+                        <p class="curr-city-time"></p>
+                        <div class="divider"></div>
+                        <img
+                            class="weather-image"
+                            src="./../../assets/weather/cloudyIcon.svg"
+                            alt="weather image"
+                        >
+                        <p class="weather-temp"></p>
+                    </div>
+                    <div class="center-divider"></div>
+                    <div class="weather-scale">
+                        <p class="curr-city-time"></p>
+                        <div class="divider"></div>
+                        <img
+                            class="weather-image"
+                            src="./../../assets/weather/windyIcon.svg"
+                            alt="weather image"
+                        >
+                        <p class="weather-temp"></p>
+                    </div>
+                    <div class="center-divider"></div>
+                    <div class="weather-scale">
+                        <p class="curr-city-time"></p>
+                        <div class="divider"></div>
+                        <img
+                            class="weather-image"
+                            src="./../../assets/weather/cloudyIcon.svg"
+                            alt="weather image"
+                        >
+                        <p class="weather-temp"></p>
+                    </div>
+                    <div class="center-divider"></div>
+                    <div class="weather-scale">
+                        <p class="curr-city-time"></p>
+                        <div class="divider"></div>
+                        <img
+                            class="weather-image"
+                            src="./../../assets/weather/rainyIcon.svg"
+                            alt="weather image"
+                        >
+                        <p class="weather-temp"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle-container">
+            <div class="middle-top-section">
+                <div class="top-cities">Top cities around the world</div>
+                <div class="city-selection-icons">
+                    <div class="weather-select-img">
+                        <img
+                            class="weather-image-icon"
+                            id="sunny"
+                            src="./../../assets/weather/sunnyIcon.svg"
+                            alt="weather image icon"
+                        >
+                    </div>
+                    <div class="weather-select-img">
+                        <img
+                            class="weather-image-icon"
+                            id="snowy"
+                            src="./../../assets/weather/snowflakeIcon.svg"
+                            alt="weather image icon"
+                        >
+                    </div>
+                    <div class="weather-select-img">
+                        <img
+                            class="weather-image-icon"
+                            id="rainy"
+                            src="./../../assets/weather/rainyIcon.svg"
+                            alt="weather image icon"
+                        >
+                    </div>
+                    <div class="display">
+                        <p>Display Top</p>
+                    </div>
+                    <div>
+                        <input class="button" type="number" min="2" max="10" value="3">
+                    </div>
+                </div>
+            </div>
+            <div class="middle-bottom-section">
+                <button class="scroll scroll-left">&lt;</button>
+                <div class="top-city-info-box">
+                </div>
+                <button class="scroll scroll-right">&gt;</button>
+            </div>
+        </div>
+        <div class="bottom-container">
+            <div class="bottom-top-section">
+                <div class="bottom-section-heading">
+                    <p class="bottom-top-section-heading">
+                        Cities across continents at a glance
+                    </p>
+                </div>
+                <div class="bottom-section-continent-arrow">
+                    <div class="bottom-section-continent-arrow-left">
+                        <p class="bottom-top-section-continent-name">Continent Name</p>
+                        <img
+                            class="bottom-top-section-arrow name-arrow"
+                            src="./../../assets/general/arrowDown.svg"
+                            alt="up-down-arrow"
+                        >
+                    </div>
+                    <div class="bottom-section-continent-arrow-right">
+                        <p class="bottom-top-section-continent-temp">Temperature</p>
+                        <img
+                            class="bottom-top-section-arrow temp-arrow"
+                            src="./../../assets/general/arrowUp.svg"
+                            alt="up-down-arrow"
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-last-section">
+                <div class="continent-city-card">
+                    <div class="continent-city-name">
+                        <p class="continent-name">Asia</p>
+                        <br >
+                        <p class="continent-city">Delhi</p>
+                        <p class="continent-city-time">10:10 AM</p>
+                    </div>
+                    <div class="continent-city-temp">
+                        <p class="continent-temp">38 &degC</p>
+                        <img
+                            class="continent-city-weather-image"
+                            src="./../../assets/weather/humidityIcon.svg"
+                            alt="weather-image"
+                        >
+                        <p class="continent-city-weather-percent">53%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/index.js" type="module"></script>
+    </body>
+</html>
